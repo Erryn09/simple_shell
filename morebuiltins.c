@@ -28,8 +28,9 @@ int _chdir(char **tokens, int *stat)
 	}
 	if (status == -1)
 	{
-		perror("hsh");
-		return (-1);
+		print("./hsh: "), _putchar(6 + '0');
+		print(": cd: can't cd to "), print(tokens[1]), print("\n");
+		return (127);
 	}
 	getcwd(cwd, sizeof(cwd));
 	if (cwd == NULL)
@@ -57,7 +58,7 @@ int _echo(char **token, int *status)
 	pid_t pid = getppid();
 
 	if (token[1] == NULL)
-		return (1);
+		return (0);
 	if (_strncmp(token[1], "$?", 2) == 0)
 	{
 		if (*status == 0)
@@ -83,7 +84,7 @@ int _echo(char **token, int *status)
 		e = token[1];
 		path = _getenv(++e);
 		if (path == NULL)
-			return (1);
+			return (0);
 		print(path), print("\n");
 		return (0);
 	}
