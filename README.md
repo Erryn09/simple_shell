@@ -5,7 +5,7 @@
 ## Write a simple UNIX command interpreter.
 #  Aim
 ##  A Unix Command Line Interpreter Built in C
-# General 
+# General
 1. Who designed and implemented the original Unix operating system?
     Answer:Ken Thompson and Dennis Ritchie created the first version of UNIX on a PDP-7 as a team in 1969.
 2. Who wrote the first version of the UNIX shell?
@@ -25,7 +25,7 @@
      Answer: A function call is a request made by a program to perform a specific task. While
      A system call is a request for the kernel to access a resource.
 9. How to create processes?
-    Answer: I UNIX and POSIX you call fork() and then exec() to create a process. When you fork it clones a copy of your current process, including all data, code, environment variables, and open files. This child process is a duplicate of the parent (execept for a few details). 
+    Answer: I UNIX and POSIX you call fork() and then exec() to create a process. When you fork it clones a copy of your current process including all data, code, environment variables, and open files. This child process is a duplicate of the parent (execept for a few details).
 10. What are the three prototypes of main?
      Answer: They are, int main(); , int main(int argc, char **argv);
 11. How does the shell use the PATH to find the programs?
