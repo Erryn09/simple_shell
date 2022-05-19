@@ -63,6 +63,7 @@ void freearray(char **array);
 int _putchar(char c);
 void prompt(void);
 void print(char *s);
+void _printf(char *s);
 void signal_handr(int signum);
 void printerror(char *in, char *name, int loop);
 void exiterror(char **argv, char **tokens, int loop);
