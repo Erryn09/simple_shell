@@ -58,7 +58,7 @@ void int_mode(char **argv)
 			_xit(input, argv, tokens, loop);
 		else
 			status = execute(tokens, loop);
-		free(t_input), freearray(tokens);
+		freearray(tokens);
 		continue;
 	}
 	exit(status);
