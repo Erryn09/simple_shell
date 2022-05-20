@@ -43,14 +43,18 @@ void int_mode(char **argv)
 			prompt();
 		read = _getline(&t_input, &bufflen, stdin);
 		if (read == EOF)
+		{
+			free(t_input);
 			exit(0);
+		}
 		if (!t_input)
+		{
+			free(t_input);
 			break;
+		}
 		input = rem_(t_input);
 		if (input[0] == '\0' || _strcmp(input, "\n") == 0)
 		{
-			free(t_input);
-			t_input = NULL;
 			continue;
 		}
 		tokens = tokenise(input);
@@ -59,8 +63,7 @@ void int_mode(char **argv)
 			_xit(input, argv, tokens, loop);
 		else
 			status = execute(tokens, loop);
-		free(input), freearray(tokens);
-		input = NULL;
+		freearray(tokens);
 		continue;
 	}
 	exit(status);
