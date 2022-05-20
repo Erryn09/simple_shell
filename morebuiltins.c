@@ -3,6 +3,7 @@
 /**
  * _chdir - change current work directory
  * @tokens: array of strings
+ * @stat: status
  *
  * Return: integer, execution status
  */
@@ -49,6 +50,7 @@ int _chdir(char **tokens, int *stat)
 /**
  * _echo - to handle special echo cases
  * @token: array of parsed strings
+ * @status: status
  *
  * Return: integer value, exit status
  */

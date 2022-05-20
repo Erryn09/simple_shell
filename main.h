@@ -33,7 +33,7 @@ int _strncmp(char *s1, char *s2, int n);
 int _isalpha(int c);
 int _atoi(char *s);
 
-char *readline(void);
+ssize_t _getline(char **line, size_t *n, FILE *stream);
 void hashtag(char *buff);
 char *rem_(char *str);
 char *rem_spe(char *str);
